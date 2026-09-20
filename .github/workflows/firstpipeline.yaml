@@ -1,8 +1,14 @@
-name: first-pipeline
-on: push
+name: Hello World
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-echo:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Print message
-      run: echo "Hello, World!"
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
